@@ -17,6 +17,11 @@ class Server {
         this.app.use('/api/v1/peliculas', require('../routes/peliculas'));
         // this.app.use('/api/v1/actores', require('../routes/actores'));
         this.app.use('/api/v1/empleados', require('../routes/empleados'));
+        this.app.use('*', (req, res)=>{
+            res.status(404).json({
+                msg: 'Page Not found'
+            })
+        });
 
     }
     listen(){

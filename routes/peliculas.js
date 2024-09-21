@@ -3,7 +3,7 @@ const { getPeliculas, getEstrenos, getPopulares }= require ('../controllers/peli
 const rutas = Router();
 
 
-rutas.get('/peliculas', getPeliculas);
+rutas.get('/', getPeliculas);
 rutas.get('/estrenos', getEstrenos);
 rutas.get('/populares', getPopulares);
 rutas.get('/populares/:id', getPopulares);
