@@ -36,7 +36,7 @@ const getEmpleadoOld = (req = request, res = response) => {
 //Forma que quiere el profe para traer el ID
 const getEmpleado = (req = request, res = response) => {
   // const{id:idEmpleado} = req.params;
-  const{idEmpleado} = req.params;
+  const{idEmpleado = ''} = req.params;
 
   console.log(idEmpleado);
 
